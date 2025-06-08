@@ -1,6 +1,6 @@
 <?php
 
-// Foodクラスの定義
+// Foodクラス定義
 class Food {
     public $name;
     public $price;
@@ -11,11 +11,11 @@ class Food {
     }
 
     public function show_price() {
-        echo "The price of {$this->name} is {$this->price} yen.<br>";
+        echo "Price: {$this->price} yen\n";
     }
 }
 
-// Animalクラスの定義
+// Animalクラス定義
 class Animal {
     public $name;
     public $height;
@@ -28,17 +28,18 @@ class Animal {
     }
 
     public function show_height() {
-        echo "The height of {$this->name} is {$this->height} cm.<br>";
+        echo "Height: {$this->height} cm\n";
     }
 }
 
-// インスタンス作成
+// インスタンスの作成
 $banana = new Food("Banana", 120);
-$cat = new Animal("Cat", 25, 4.5);
+$cat = new Animal("Cat", 25, 4);
 
-// インスタンスの内容を表示
-echo "<pre>"; // 見やすく整形
+// インスタンス情報を出力
 print_r($banana);
 print_r($cat);
-echo "</pre>";
-?>
+
+// メソッドの実行
+$banana->show_price();
+$cat->show_height();
